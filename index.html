@@ -1,0 +1,818 @@
+﻿<!DOCTYPE html>
+<html lang="es-CL" data-palette="1" data-fonts="a">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lista Nacional · Colegio de Periodistas de Chile</title>
+  <meta name="description" content="Sitio de demostración para presentar una lista nacional y candidaturas regionales a la dirección del Colegio de Periodistas de Chile. Contenido referencial con textos Lorem ipsum.">
+  <meta name="theme-color" content="#f8f5ef">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Lista Nacional · Colegio de Periodistas de Chile">
+  <meta property="og:description" content="Cinco candidaturas nacionales y una red en las dieciséis regiones. Sitio de demostración con contenido referencial.">
+  <meta property="og:locale" content="es_CL">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230F1F2B'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='28' fill='%23F8F5EF' text-anchor='middle'%3Ecp%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&amp;family=Fraunces:wght@400;500;600&amp;family=Inter:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;family=Source+Sans+3:wght@400;500;600&amp;family=Source+Serif+4:wght@400;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <script>
+    document.documentElement.classList.add('js');
+    try {
+      var params = new URLSearchParams(window.location.search);
+      var palette = params.get('paleta');
+      var fonts = params.get('fuentes');
+      if (palette === '1' || palette === '2' || palette === '3') {
+        document.documentElement.dataset.palette = palette;
+      }
+      if (fonts === 'a' || fonts === 'b' || fonts === 'c') {
+        document.documentElement.dataset.fonts = fonts;
+      }
+    } catch (error) {}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 12h15"/><path d="m13 6 6 6-6 6"/>
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m4 12 5 5L20 6"/>
+    </symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3 5 6v5.5c0 4.5 2.9 7.9 7 9.5 4.1-1.6 7-5 7-9.5V6l-7-3Z"/>
+      <path d="m9 11.8 2 2 4-4"/>
+    </symbol>
+    <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="9" cy="8" r="3.2"/>
+      <path d="M2.6 19.6a6.4 6.4 0 0 1 12.8 0"/>
+      <path d="M16.2 5.3a3.2 3.2 0 0 1 0 5.4"/>
+      <path d="M17.7 14.2a6.4 6.4 0 0 1 3.7 5.4"/>
+    </symbol>
+    <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5v-15Z"/>
+      <path d="M8 7h8M8 11h5"/>
+    </symbol>
+    <symbol id="i-megaphone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3 11v2a1 1 0 0 0 1 1h2l5 4V6L6 10H4a1 1 0 0 0-1 1Z"/>
+      <path d="M15 8.2a4.6 4.6 0 0 1 0 7.6"/>
+      <path d="M18 5a8.7 8.7 0 0 1 0 14"/>
+    </symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/>
+      <circle cx="12" cy="10" r="2.5"/>
+    </symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="5" width="18" height="14" rx="2.4"/>
+      <path d="m3.6 7.2 8.4 6 8.4-6"/>
+    </symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.02Zm-7.01 15.24h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23a8.2 8.2 0 0 1 8.24 8.24c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/>
+    </symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M12 7v5.2l3.4 2"/>
+    </symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+      <path d="M4 7h16M4 12h16M4 17h16"/>
+    </symbol>
+    <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+      <path d="m6 6 12 12M18 6 6 18"/>
+    </symbol>
+    <symbol id="i-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 19V5"/><path d="m6 11 6-6 6 6"/>
+    </symbol>
+  </svg>
+
+  <div class="demo-bar" role="note">
+    <div class="container demo-bar-inner">
+      <p><strong>Demostración</strong> · Textos Lorem ipsum y fotografías como bloques de color.<span class="preview-note" id="preview-note" hidden></span></p>
+      <span class="demo-links">
+        <a href="diseno.html">Ver guía de diseño <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="preview-reset" id="preview-reset" href="index.html" hidden>Restablecer diseño</a>
+      </span>
+    </div>
+  </div>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Inicio: Colegio de Periodistas de Chile, Lista Nacional">
+        <span class="brand-mark" aria-hidden="true">cp</span>
+        <span class="brand-text">
+          <span class="brand-name">Colegio de Periodistas de Chile</span>
+          <span class="brand-sub">Lista Nacional · Candidaturas</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Abrir menú de navegación" data-nav-toggle>
+        <svg class="icon icon--menu" aria-hidden="true"><use href="#i-menu"/></svg>
+        <svg class="icon icon--close" aria-hidden="true"><use href="#i-close"/></svg>
+      </button>
+
+      <nav class="nav" id="primary-nav" aria-label="Navegación principal" data-nav>
+        <a href="#ideas">Ideas fuerza</a>
+        <a href="#lista-nacional">Lista nacional</a>
+        <a href="#regiones">Regiones</a>
+        <a href="#programa">Puntos</a>
+        <a class="btn btn--primary" href="#contacto">Escríbenos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <!-- Hero -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Elecciones de Directorio Nacional · Colegio de Periodistas</p>
+          <h1 id="hero-title">Periodismo con derechos, colegio con voz.</h1>
+          <p class="lead">Una lista de cinco nombres para conducir el Colegio y candidaturas en las dieciséis regiones. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+          <div class="hero-actions">
+            <a class="btn btn--primary" href="#lista-nacional">Conoce la lista nacional <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn--ghost" href="#regiones">Ver candidaturas regionales</a>
+          </div>
+          <ul class="meta-row">
+            <li>5 candidaturas nacionales</li>
+            <li>16 regiones</li>
+            <li>Contenido referencial</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual">
+          <div class="mosaic" role="group" aria-label="Mosaico referencial de candidaturas nacionales y regionales">
+            <div class="photo ph-a tile" role="img" aria-label="Espacio reservado para la fotografía de Antonia Vergara">
+              <span class="tile-index">01</span><span class="photo-mark">AV</span>
+            </div>
+            <div class="photo ph-b tile" role="img" aria-label="Espacio reservado para la fotografía de Matías Fuentes">
+              <span class="tile-index">02</span><span class="photo-mark">MF</span>
+            </div>
+            <div class="photo ph-d tile" role="img" aria-label="Espacio reservado para la fotografía de Camila Herrera">
+              <span class="tile-index">03</span><span class="photo-mark">CH</span>
+            </div>
+            <div class="photo ph-e tile" role="img" aria-label="Espacio reservado para la fotografía de Rodrigo Salinas">
+              <span class="tile-index">04</span><span class="photo-mark">RS</span>
+            </div>
+            <div class="photo ph-f tile" role="img" aria-label="Espacio reservado para la fotografía de Fernanda Olivares">
+              <span class="tile-index">05</span><span class="photo-mark">FO</span>
+            </div>
+            <div class="tile tile--stat">
+              <span class="stat-n">17</span>
+              <span class="stat-l">candidaturas de ejemplo en todo Chile</span>
+            </div>
+          </div>
+          <div class="hero-card">
+            <span class="dot" aria-hidden="true"></span>
+            <div>
+              <strong>Lista Nacional</strong>
+              <span>Cinco nombres, una propuesta colectiva.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ideas fuerza -->
+    <section class="section" id="ideas" aria-labelledby="ideas-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Ideas fuerza</p>
+            <h2 id="ideas-title">Cuatro convicciones que ordenan la propuesta</h2>
+          </div>
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere justo at facilisis consequat, neque augue volutpat nibh.</p>
+        </div>
+
+        <div class="grid grid--4">
+          <article class="card idea-card reveal">
+            <span class="icon-box" aria-hidden="true"><svg class="icon"><use href="#i-shield"/></svg></span>
+            <h3>Derechos del ejercicio periodístico</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <span class="card-index">EJE 01</span>
+          </article>
+
+          <article class="card idea-card reveal" style="--delay: 1">
+            <span class="icon-box" aria-hidden="true"><svg class="icon"><use href="#i-users"/></svg></span>
+            <h3>Un Colegio cercano y transparente</h3>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <span class="card-index">EJE 02</span>
+          </article>
+
+          <article class="card idea-card reveal" style="--delay: 2">
+            <span class="icon-box" aria-hidden="true"><svg class="icon"><use href="#i-book"/></svg></span>
+            <h3>Formación, empleo y futuro del oficio</h3>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <span class="card-index">EJE 03</span>
+          </article>
+
+          <article class="card idea-card reveal" style="--delay: 3">
+            <span class="icon-box" aria-hidden="true"><svg class="icon"><use href="#i-megaphone"/></svg></span>
+            <h3>Ética, libertad de prensa y medios digitales</h3>
+            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <span class="card-index">EJE 04</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lista nacional -->
+    <section class="section" id="lista-nacional" aria-labelledby="nacional-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Lista nacional · Cinco candidaturas</p>
+            <h2 id="nacional-title">Cinco nombres para conducir el Colegio</h2>
+          </div>
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere justo at facilisis consequat, neque augue volutpat nibh, at pretium orci justo non ipsum.</p>
+        </div>
+
+        <article class="feature reveal">
+          <div class="feature-media">
+            <div class="photo ph-a" role="img" aria-label="Espacio reservado para la fotografía de Antonia Vergara Ruiz">
+              <span class="photo-mark">AV</span>
+              <span class="photo-tag">Fotografía</span>
+            </div>
+          </div>
+          <div class="feature-body">
+            <span class="pill pill--accent">Presidencia</span>
+            <h3>Antonia Vergara Ruiz</h3>
+            <p class="role">Periodista · Universidad de Chile · 18 años de ejercicio profesional</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere justo at facilisis consequat, neque augue volutpat nibh, at pretium orci justo non ipsum. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <blockquote class="quote">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium tincidunt lacus, sed aliquet lectus pretium vitae.”</blockquote>
+          </div>
+        </article>
+
+        <div class="person-grid">
+          <article class="card person-card reveal">
+            <div class="person-media">
+              <div class="photo ph-b" role="img" aria-label="Espacio reservado para la fotografía de Matías Fuentes Leiva">
+                <span class="photo-mark">MF</span>
+              </div>
+            </div>
+            <div class="person-body">
+              <span class="pill">Secretaría General</span>
+              <h3>Matías Fuentes Leiva</h3>
+              <p class="role">Periodista · Magíster en Comunicación Política</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere justo at facilisis consequat, neque augue volutpat nibh, at pretium orci justo non ipsum.</p>
+              <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+          </article>
+
+          <article class="card person-card reveal" style="--delay: 1">
+            <div class="person-media">
+              <div class="photo ph-d" role="img" aria-label="Espacio reservado para la fotografía de Camila Herrera Soto">
+                <span class="photo-mark">CH</span>
+              </div>
+            </div>
+            <div class="person-body">
+              <span class="pill">Tesorería</span>
+              <h3>Camila Herrera Soto</h3>
+              <p class="role">Periodista · Especialista en gestión cultural</p>
+              <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <p>Nulla facilisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae sapien ut libero venenatis faucibus.</p>
+            </div>
+          </article>
+
+          <article class="card person-card reveal">
+            <div class="person-media">
+              <div class="photo ph-e" role="img" aria-label="Espacio reservado para la fotografía de Rodrigo Salinas Muñoz">
+                <span class="photo-mark">RS</span>
+              </div>
+            </div>
+            <div class="person-body">
+              <span class="pill">Dirección</span>
+              <h3>Rodrigo Salinas Muñoz</h3>
+              <p class="role">Periodista · Docente universitario</p>
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
+              <p>Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris.</p>
+            </div>
+          </article>
+
+          <article class="card person-card reveal" style="--delay: 1">
+            <div class="person-media">
+              <div class="photo ph-f" role="img" aria-label="Espacio reservado para la fotografía de Fernanda Olivares Díaz">
+                <span class="photo-mark">FO</span>
+              </div>
+            </div>
+            <div class="person-body">
+              <span class="pill">Dirección</span>
+              <h3>Fernanda Olivares Díaz</h3>
+              <p class="role">Periodista · Medios digitales y datos</p>
+              <p>Nulla facilisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae sapien ut libero venenatis faucibus.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere justo at facilisis consequat, neque augue volutpat nibh, at pretium orci justo non ipsum.</p>
+            </div>
+          </article>
+        </div>
+
+        <p class="national-note">
+          <svg class="icon" aria-hidden="true"><use href="#i-users"/></svg>
+          Las cinco candidaturas nacionales cuentan con una presentación extendida. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+      </div>
+    </section>
+
+    <!-- Candidaturas regionales -->
+    <section class="section" id="regiones" aria-labelledby="regiones-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Candidaturas regionales</p>
+            <h2 id="regiones-title">Una red en todo el país</h2>
+          </div>
+          <p class="lead">De Arica a Magallanes. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+
+        <div class="region-grid">
+          <article class="card region-card reveal">
+            <div class="photo ph-a region-media" role="img" aria-label="Espacio reservado para la fotografía de Ignacio Mamani Flores">
+              <span class="photo-mark">IM</span>
+            </div>
+            <div class="region-body">
+              <p class="region-name"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Arica y Parinacota</p>
+              <h3>Ignacio Mamani Flores</h3>
+              <p class="role">Candidatura a Consejo Regional</p>
+              <p class="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
+            </div>
+          </article>
+
+          <article class="card region-card reveal" style="--delay: 1">
+            <div class="photo ph-b region-media" role="img" aria-label="Espacio reservado para la fotografía de Daniela Choque Rivera">
+              <span class="photo-mark">DC</span>
+            </div>
+            <div class="region-body">
+              <p class="region-name"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Tarapacá</p>
+              <h3>Daniela Choque Rivera</h3>
+              <p class="role">Candidatura a Consejo Regional</p>
+              <p class="bio">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+            </div>
+          </article>
+
+          <article class="card region-card reveal" style="--delay: 2">
+            <div class="photo ph-c region-media" role="img" aria-label="Espacio reservado para la fotografía de Sebastián Cortés Bravo">
+              <span class="photo-mark">SC</span>
+            </div>
+            <div class="region-body">
+              <p class="region-name"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Antofagasta</p>
+              <h3>Sebastián Cortés Bravo</h3>
+              <p class="role">Candidatura a Consejo Regional</p>
+              <p class="bio">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+            </div>
+          </article>
+
+          <article class="card region-card reveal" style="--delay: 3">
+            <div class="photo ph-d region-media" role="img" aria-label="Espacio reservado para la fotografía de Rocío Álvarez Tapia">
+              <span class="photo-mark">RA</span>
+            </div>
+            <div class="region-body">
+              <p class="region-name"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Atacama</p>
+              <h3>Rocío Álvarez Tapia</h3>
+              <p class="role">Candidatura a Consejo Regional</p>
+              <p class="bio">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.</p>
+            </div>
+          </article>
+
+          <article class="card region-card reveal">
+            <div class="photo ph-e region-media" role="img" aria-label="Espacio reservado para la fotografía de Benjamín Godoy Pizarro">
+              <span class="photo-mark">BG</span>
+            </div>
+            <div class="region-body">
+              <p class="region-name"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Coquimbo</p>
+              <h3>Benjamín Godoy Pizarro</h3>
+              <p class="role">Candidatura a Consejo Regional</p>
+              <p class="bio">Nulla facilisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.</p>
+            </div>
+          </article>
+
+          <article class="card region-card reveal" style="--delay: 1">
+            <div class="photo ph-f region-media" role="img" aria-label="Espacio reservado para la fotografía de Javiera Núñez Paredes">
+              <span class="photo-mark">JN</span>
+            </div>
+            <div class="region-body">
+              <p class="region-name"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Valparaíso</p>
+              <h3>Javiera Núñez Paredes</h3>
+              <p class="role">Candidatura a Consejo Regional</p>
+              <p class="bio">Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius.</p>
+            </div>
+          </article>
+
+          <article class="card region-card reveal" style="--delay: 2">
+            <div class="photo ph-a region-media" role="img" aria-label="Espacio reservado para la fotografía de Tomás Aguirre Lagos">
+              <span class="photo-mark">TA</span>
+            </div>
+            <div class="region-body">
+              <p class="region-name"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Metropolitana</p>
+              <h3>Tomás Aguirre Lagos</h3>
+              <p class="role">Candidatura a Consejo Regional</p>
+              <p class="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere justo at facilisis.</p>
+            </div>
+          </article>
+
+          <article class="card region-card reveal" style="--delay: 3">
+            <div class="photo ph-b region-media" role="img" aria-label="Espacio reservado para la fotografía de Constanza Ríos Vergara">
+              <span class="photo-mark">CR</span>
+            </div>
+            <div class="region-body">
+              <p class="region-name"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> O'Higgins</p>
+              <h3>Constanza Ríos Vergara</h3>
+              <p class="role">Candidatura a Consejo Regional</p>
+              <p class="bio">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </article>
+
+          <article class="card region-card reveal">
+            <div class="photo ph-c region-media" role="img" aria-label="Espacio reservado para la fotografía de Nicolás Bravo Espinoza">
+              <span class="photo-mark">NB</span>
+            </div>
+            <div class="region-body">
+              <p class="region-name"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Maule</p>
+              <h3>Nicolás Bravo Espinoza</h3>
+              <p class="role">Candidatura a Consejo Regional</p>
+              <p class="bio">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+            </div>
+          </article>
+
+          <article class="card region-card reveal" style="--delay: 1">
+            <div class="photo ph-d region-media" role="img" aria-label="Espacio reservado para la fotografía de Felipe Sandoval Neira">
+              <span class="photo-mark">FS</span>
+            </div>
+            <div class="region-body">
+              <p class="region-name"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Ñuble</p>
+              <h3>Felipe Sandoval Neira</h3>
+              <p class="role">Candidatura a Consejo Regional</p>
+              <p class="bio">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+            </div>
+          </article>
+
+          <article class="card region-card reveal" style="--delay: 2">
+            <div class="photo ph-e region-media" role="img" aria-label="Espacio reservado para la fotografía de Paula Contreras Vidal">
+              <span class="photo-mark">PC</span>
+            </div>
+            <div class="region-body">
+              <p class="region-name"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Biobío</p>
+              <h3>Paula Contreras Vidal</h3>
+              <p class="role">Candidatura a Consejo Regional</p>
+              <p class="bio">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+            </div>
+          </article>
+
+          <article class="card region-card reveal" style="--delay: 3">
+            <div class="photo ph-f region-media" role="img" aria-label="Espacio reservado para la fotografía de Camila Sepúlveda Lagos">
+              <span class="photo-mark">CS</span>
+            </div>
+            <div class="region-body">
+              <p class="region-name"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> La Araucanía</p>
+              <h3>Camila Sepúlveda Lagos</h3>
+              <p class="role">Candidatura a Consejo Regional</p>
+              <p class="bio">Nulla facilisi. Vestibulum ante ipsum primis in faucibus orci luctus.</p>
+            </div>
+          </article>
+
+          <article class="card region-card reveal">
+            <div class="photo ph-a region-media" role="img" aria-label="Espacio reservado para la fotografía de Vicente Arriagada Muñoz">
+              <span class="photo-mark">VA</span>
+            </div>
+            <div class="region-body">
+              <p class="region-name"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Los Ríos</p>
+              <h3>Vicente Arriagada Muñoz</h3>
+              <p class="role">Candidatura a Consejo Regional</p>
+              <p class="bio">Curabitur pretium tincidunt lacus. Nulla gravida orci a odio.</p>
+            </div>
+          </article>
+
+          <article class="card region-card reveal" style="--delay: 1">
+            <div class="photo ph-b region-media" role="img" aria-label="Espacio reservado para la fotografía de Andrés Barría Oyarzún">
+              <span class="photo-mark">AB</span>
+            </div>
+            <div class="region-body">
+              <p class="region-name"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Los Lagos</p>
+              <h3>Andrés Barría Oyarzún</h3>
+              <p class="role">Candidatura a Consejo Regional</p>
+              <p class="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod.</p>
+            </div>
+          </article>
+
+          <article class="card region-card reveal" style="--delay: 2">
+            <div class="photo ph-c region-media" role="img" aria-label="Espacio reservado para la fotografía de Martina Vásquez Silva">
+              <span class="photo-mark">MV</span>
+            </div>
+            <div class="region-body">
+              <p class="region-name"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Aysén</p>
+              <h3>Martina Vásquez Silva</h3>
+              <p class="role">Candidatura a Consejo Regional</p>
+              <p class="bio">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
+            </div>
+          </article>
+
+          <article class="card region-card reveal" style="--delay: 3">
+            <div class="photo ph-d region-media" role="img" aria-label="Espacio reservado para la fotografía de Sofía Mansilla Vera">
+              <span class="photo-mark">SM</span>
+            </div>
+            <div class="region-body">
+              <p class="region-name"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Magallanes</p>
+              <h3>Sofía Mansilla Vera</h3>
+              <p class="role">Candidatura a Consejo Regional</p>
+              <p class="bio">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="regions-foot">
+          <p>Dieciséis regiones, una misma lista. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+          <a class="btn btn--ghost" href="#contacto">Contactar a una candidatura regional <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Puntos de trabajo -->
+    <section class="section section--soft" id="programa" aria-labelledby="programa-title">
+      <div class="container program-grid">
+        <div class="program-intro">
+          <div class="section-head section-head--stack">
+            <p class="eyebrow">Puntos de trabajo</p>
+            <h2 id="programa-title">Seis compromisos para el primer año</h2>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere justo at facilisis consequat.</p>
+          </div>
+          <div class="card quote-card">
+            <blockquote class="quote">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium tincidunt lacus.”</blockquote>
+            <footer>Antonia Vergara Ruiz <span>Candidata a la Presidencia</span></footer>
+          </div>
+        </div>
+
+        <ol class="points">
+          <li class="reveal">
+            <span class="point-n">01</span>
+            <div>
+              <h3>Actualización del reglamento de ética</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span class="point-n">02</span>
+            <div>
+              <h3>Fondo de perfeccionamiento profesional</h3>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span class="point-n">03</span>
+            <div>
+              <h3>Observatorio de libertad de prensa</h3>
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span class="point-n">04</span>
+            <div>
+              <h3>Bolsa de trabajo y convenios de práctica</h3>
+              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span class="point-n">05</span>
+            <div>
+              <h3>Atención descentralizada en regiones</h3>
+              <p>Nulla facilisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span class="point-n">06</span>
+            <div>
+              <h3>Transparencia activa de cuentas y acuerdos</h3>
+              <p>Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section--cta" aria-labelledby="cta-title">
+      <div class="container">
+        <aside class="cta-band reveal">
+          <div>
+            <p class="eyebrow">Participa</p>
+            <h2 id="cta-title">¿Tienes preguntas o quieres sumarte a la lista?</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere justo at facilisis consequat, neque augue volutpat nibh.</p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn--light" href="#contacto">Escríbenos</a>
+            <a class="btn btn--wa" href="#" data-wa>
+              <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> WhatsApp
+            </a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="section" id="contacto" aria-labelledby="contacto-title">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <p class="eyebrow">Contacto</p>
+          <h2 id="contacto-title">Hablemos del Colegio que queremos</h2>
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere justo at facilisis consequat, neque augue volutpat nibh.</p>
+
+          <ul class="contact-list">
+            <li>
+              <span class="icon-box" aria-hidden="true"><svg class="icon"><use href="#i-mail"/></svg></span>
+              <div>
+                <span class="contact-label">Correo</span>
+                <a href="mailto:contacto@listanacional.cl">contacto@listanacional.cl</a>
+              </div>
+            </li>
+            <li>
+              <span class="icon-box" aria-hidden="true"><svg class="icon"><use href="#i-whatsapp"/></svg></span>
+              <div>
+                <span class="contact-label">WhatsApp</span>
+                <a href="#" data-wa data-wa-number>+56 9 0000 0000</a>
+              </div>
+            </li>
+            <li>
+              <span class="icon-box" aria-hidden="true"><svg class="icon"><use href="#i-pin"/></svg></span>
+              <div>
+                <span class="contact-label">Dirección referencial</span>
+                <span class="contact-value">Santiago, Chile</span>
+              </div>
+            </li>
+            <li>
+              <span class="icon-box" aria-hidden="true"><svg class="icon"><use href="#i-clock"/></svg></span>
+              <div>
+                <span class="contact-label">Horario</span>
+                <span class="contact-value">Lunes a viernes · 9:30 a 18:30</span>
+              </div>
+            </li>
+          </ul>
+
+          <p class="info-note">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Respondemos consultas de medios, candidaturas regionales y afiliación en un plazo de 48 horas hábiles.</p>
+        </div>
+
+        <div class="form-card">
+          <div id="form-intro">
+            <h3>Escríbenos</h3>
+            <p>Completa el formulario y te responderemos a la brevedad.</p>
+          </div>
+
+          <form class="form" id="contact-form" action="#" method="post" novalidate>
+            <div class="form-row">
+              <div class="field">
+                <label for="nombre">Nombre completo <span class="req" aria-hidden="true">*</span></label>
+                <input id="nombre" name="nombre" type="text" autocomplete="name" placeholder="Tu nombre y apellido" required aria-describedby="nombre-error">
+                <span class="error" id="nombre-error"></span>
+              </div>
+              <div class="field">
+                <label for="email">Correo electrónico <span class="req" aria-hidden="true">*</span></label>
+                <input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="nombre@dominio.cl" required aria-describedby="email-error">
+                <span class="error" id="email-error"></span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="region">Región <span class="req" aria-hidden="true">*</span></label>
+                <select id="region" name="region" required aria-describedby="region-error">
+                  <option value="" selected disabled>Selecciona una región</option>
+                  <option value="arica">Arica y Parinacota</option>
+                  <option value="tarapaca">Tarapacá</option>
+                  <option value="antofagasta">Antofagasta</option>
+                  <option value="atacama">Atacama</option>
+                  <option value="coquimbo">Coquimbo</option>
+                  <option value="valparaiso">Valparaíso</option>
+                  <option value="metropolitana">Metropolitana de Santiago</option>
+                  <option value="ohiggins">O'Higgins</option>
+                  <option value="maule">Maule</option>
+                  <option value="nuble">Ñuble</option>
+                  <option value="biobio">Biobío</option>
+                  <option value="araucania">La Araucanía</option>
+                  <option value="losrios">Los Ríos</option>
+                  <option value="loslagos">Los Lagos</option>
+                  <option value="aysen">Aysén</option>
+                  <option value="magallanes">Magallanes y la Antártica Chilena</option>
+                  <option value="fuera">Fuera de Chile</option>
+                </select>
+                <span class="error" id="region-error"></span>
+              </div>
+              <div class="field">
+                <label for="motivo">Motivo de contacto <span class="req" aria-hidden="true">*</span></label>
+                <select id="motivo" name="motivo" required aria-describedby="motivo-error">
+                  <option value="" selected disabled>Selecciona un motivo</option>
+                  <option value="general">Consulta general</option>
+                  <option value="apoyo">Apoyo a la candidatura</option>
+                  <option value="prensa">Prensa y medios</option>
+                  <option value="gremial">Afiliación y derechos gremiales</option>
+                  <option value="otro">Otro</option>
+                </select>
+                <span class="error" id="motivo-error"></span>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="mensaje">Mensaje <span class="req" aria-hidden="true">*</span></label>
+              <textarea id="mensaje" name="mensaje" maxlength="800" required placeholder="Cuéntanos en qué podemos ayudarte o qué quieres aportar." aria-describedby="mensaje-error mensaje-help"></textarea>
+              <div class="field-help" id="mensaje-help">
+                <span>Mínimo 20 caracteres.</span>
+                <span data-counter>0/800</span>
+              </div>
+              <span class="error" id="mensaje-error"></span>
+            </div>
+
+            <div class="field field--check">
+              <label class="checkbox" for="consent">
+                <input type="checkbox" id="consent" name="consent" required aria-describedby="consent-error">
+                <span>Autorizo el uso de mis datos para responder esta consulta. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+              </label>
+              <span class="error" id="consent-error"></span>
+            </div>
+
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+
+            <div class="form-footer">
+              <button class="btn btn--primary btn--block" type="submit">Enviar mensaje <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+              <p class="form-note">Formulario de demostración: aún no está conectado a un servidor. No se enviarán datos.</p>
+            </div>
+          </form>
+
+          <div class="form-success" id="form-success" role="status" tabindex="-1" hidden>
+            <span class="icon-box" aria-hidden="true"><svg class="icon"><use href="#i-check"/></svg></span>
+            <div>
+              <h3>Formulario completado</h3>
+              <p>Los datos pasaron la validación en tu navegador, pero este sitio de demostración <strong>todavía no los envía a ningún servidor</strong>. Al conectar un servicio de envío —Formspree, Netlify Forms o tu propia API— aquí aparecerá la confirmación real.</p>
+              <div class="form-success-actions">
+                <a class="btn btn--ghost" href="mailto:contacto@listanacional.cl">Escribir por correo</a>
+                <a class="btn btn--wa" href="#" data-wa>
+                  <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> WhatsApp
+                </a>
+                <button class="btn btn--ghost" type="button" id="reset-form">Enviar otro mensaje</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-note">
+          <a class="brand" href="index.html" aria-label="Inicio: Colegio de Periodistas de Chile, Lista Nacional">
+            <span class="brand-mark" aria-hidden="true">cp</span>
+            <span class="brand-text">
+              <span class="brand-name">Lista Nacional</span>
+              <span class="brand-sub">Colegio de Periodistas de Chile</span>
+            </span>
+          </a>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere justo at facilisis consequat.</p>
+        </div>
+
+        <div class="footer-col">
+          <h3>Navegación</h3>
+          <ul>
+            <li><a href="#ideas">Ideas fuerza</a></li>
+            <li><a href="#lista-nacional">Lista nacional</a></li>
+            <li><a href="#regiones">Candidaturas regionales</a></li>
+            <li><a href="#programa">Puntos de trabajo</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Candidaturas</h3>
+          <ul>
+            <li><a href="#lista-nacional">Presidencia y dirección</a></li>
+            <li><a href="#regiones">Consejos regionales</a></li>
+            <li><a href="diseno.html">Guía de diseño</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Contacto</h3>
+          <ul>
+            <li><a href="mailto:contacto@listanacional.cl">contacto@listanacional.cl</a></li>
+            <li><a href="#" data-wa data-wa-number>+56 9 0000 0000</a></li>
+            <li><span>Santiago, Chile</span></li>
+            <li><span>Lunes a viernes · 9:30 a 18:30</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span data-year>2026</span> Lista Nacional · Colegio de Periodistas de Chile. Sitio de demostración con textos Lorem ipsum, nombres y fotografías referenciales. Sin vínculo oficial con el Colegio.</p>
+        <a href="#top">Volver arriba <svg class="icon" aria-hidden="true"><use href="#i-up"/></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="#" data-wa aria-label="Escribir por WhatsApp">
+    <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+    <span class="wa-text">WhatsApp</span>
+  </a>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
+
