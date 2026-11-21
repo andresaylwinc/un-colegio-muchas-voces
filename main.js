@@ -18,7 +18,7 @@
   var WHATSAPP_NUMBER = '56900000000';
   var WHATSAPP_DISPLAY = '+56 9 0000 0000';
   var WHATSAPP_MESSAGE =
-    'Hola, escribo desde el sitio de la Lista Nacional del Colegio de Periodistas de Chile. Quisiera más información.';
+    'Hola, escribo desde el sitio de Un colegio: Muchas voces, lista para el Colegio de Periodistas de Chile. Quisiera más información.';
 
   var waLinks = document.querySelectorAll('[data-wa]');
   if (waLinks.length) {

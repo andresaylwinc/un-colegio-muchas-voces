@@ -1,8 +1,8 @@
-# Lista Nacional · Colegio de Periodistas de Chile
+# Un colegio: Muchas voces
 
-Sitio web estático de demostración para presentar una lista de candidaturas a la
-dirección nacional del Colegio de Periodistas de Chile, con cinco nombres a nivel
-nacional y candidaturas en las dieciséis regiones.
+Sitio web estático de demostración de la lista **Un colegio: Muchas voces**, para
+presentar candidaturas a la dirección nacional del Colegio de Periodistas de Chile,
+con cinco nombres a nivel nacional y candidaturas en las dieciséis regiones.
 
 No usa frameworks, dependencias instalables ni proceso de build: son archivos HTML,
 CSS y JavaScript que se abren directamente en el navegador.
@@ -38,6 +38,7 @@ con las pilas de respaldo del sistema definidas en `styles.css`.
 | `diseno.html`  | Guía de diseño: tres paletas de color y tres paquetes tipográficos |
 | `styles.css`   | Tokens de diseño, componentes, responsive y estilos de la guía    |
 | `main.js`      | Menú móvil, WhatsApp, validación del formulario, animaciones      |
+| `img/candidatos/` | Fotografías optimizadas de las candidaturas de ejemplo         |
 | `capturas/`    | Capturas de referencia del sitio terminado                        |
 
 El sitio incluye:
@@ -52,8 +53,11 @@ El sitio incluye:
 - Menú móvil, navegación por anclas y animaciones suaves que respetan
   `prefers-reduced-motion`.
 
-Todo el contenido de candidaturas es referencial: los nombres son ficticios, los
-textos son *Lorem ipsum* y las fotografías son bloques de color con iniciales.
+Las candidaturas nacionales combinan nombres y fotografías de ejemplo —**Carlos
+Valverde**, **Elías Barticevic** y **Pamela Hidalgo**— con textos *Lorem ipsum*. La
+presidencia y la segunda dirección siguen siendo referenciales, al igual que las
+dieciséis candidaturas regionales. Los cargos asignados a las tres personas son
+provisionales y se pueden cambiar en `index.html`.
 
 ---
 
@@ -67,7 +71,7 @@ del sitio (botón flotante, CTA, contacto y pie):
 ```js
 var WHATSAPP_NUMBER = '56900000000'; // formato internacional, sin + ni espacios
 var WHATSAPP_DISPLAY = '+56 9 0000 0000';
-var WHATSAPP_MESSAGE = 'Hola, escribo desde el sitio de la Lista Nacional...';
+var WHATSAPP_MESSAGE = 'Hola, escribo desde el sitio de Un colegio: Muchas voces...';
 ```
 
 ### 2. Correo y datos de contacto
@@ -82,6 +86,11 @@ Los candidatos están en `index.html`, en este orden:
 1. `#lista-nacional`: bloque destacado de la presidencia y cuatro tarjetas.
 2. `#regiones`: dieciséis tarjetas, una por región.
 
+En esta versión de ejemplo, Carlos Valverde aparece en **Secretaría General**, Elías
+Barticevic en **Tesorería** y Pamela Hidalgo en **Dirección**. Antonia Vergara Ruiz
+(presidencia) y Fernanda Olivares Díaz (segunda dirección) siguen siendo
+referenciales. Cambia los nombres, cargos y fotos según corresponda.
+
 Cada tarjeta sigue la misma estructura (píldora del cargo, nombre, rol, párrafos).
 Reemplaza los párrafos Lorem ipsum por las presentaciones definitivas. Las
 presentaciones nacionales ya tienen más espacio y dos párrafos; las regionales, un
@@ -89,18 +98,25 @@ texto breve.
 
 ### 4. Fotografías
 
-Los bloques de color usan `<div class="photo ph-x">` con iniciales. Para poner una
-foto real, reemplaza el bloque por:
+Las versiones web de las tres fotos están en `img/candidatos/` (1000 × 1250 px, JPG).
+Los archivos originales quedaron en `fotosCandidatos/`, fuera del repositorio mediante
+`.gitignore`.
+
+Para cambiar una foto, reemplaza el archivo manteniendo el nombre o actualiza el
+`src`:
 
 ```html
 <div class="photo ph-a">
-  <img src="img/antonia-vergara.jpg" alt="Retrato de Antonia Vergara Ruiz">
+  <img src="img/candidatos/nombre-apellido.jpg" alt="Retrato de Nombre Apellido" width="1000" height="1250">
 </div>
 ```
 
-El CSS ya cubre la imagen (`object-fit: cover`) y oculta las iniciales. Elimina la
-etiqueta `FOTOGRAFÍA` del bloque destacado cuando uses la foto definitiva. Se
-recomiendan retratos verticales de al menos 800 × 1000 px y formato JPG/WebP.
+El CSS cubre la imagen con `object-fit: cover`; puedes ajustar el encuadre con
+`object-position` en `.photo img`. Para los bloques que aún no tienen foto, mantén el
+`photo-mark` con las iniciales y su `role="img"`.
+
+La foto de Pamela Hidalgo conserva en sus metadatos la autoría de Hugo Cruz
+(`hugocruzfotografia@gmail.com`). Confirma la autorización de uso antes de publicar.
 
 ### 5. Paleta y tipografía
 
@@ -203,7 +219,8 @@ uses para aligerar la carga.
   `aria-describedby`, resumen de estado `role="status"` y foco al primer error.
 - Botón de WhatsApp con `aria-label`; menú móvil con `aria-expanded` y cierre con
   `Esc`.
-- Bloques de fotografía con `role="img"` y descripción para lectores de pantalla.
+- Fotografías con texto alternativo y bloques de color descriptivos para lectores de
+  pantalla.
 - Contraste AA verificado en las tres paletas; tipografías de respaldo si falla la
   red.
 - Diseño responsive comprobado entre 360 px y 1440 px de ancho.
@@ -213,9 +230,9 @@ uses para aligerar la carga.
 
 ## Antes de publicar
 
-- [ ] Reemplazar todos los textos Lorem ipsum y los nombres ficticios.
+- [ ] Confirmar cargos y reemplazar los textos Lorem ipsum y las candidaturas referenciales.
 - [ ] Cambiar correo, WhatsApp, dirección y horario.
-- [ ] Incorporar las fotografías reales con autorización de uso.
+- [ ] Revisar la autorización de las fotografías, incluida la de Pamela Hidalgo.
 - [ ] Conectar el formulario a un servicio de envío y borrar el aviso de demo.
 - [ ] Elegir la paleta y el paquete tipográfico definitivos.
 - [ ] Quitar la barra de demostración y ajustar el pie de página.

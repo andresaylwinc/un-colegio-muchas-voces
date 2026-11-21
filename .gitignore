@@ -15,3 +15,6 @@ node_modules/
 # Variables de entorno (por ejemplo, claves de un servicio de formularios)
 .env
 .env.*
+
+# Fotografías originales (las versiones web están en img/candidatos/)
+fotosCandidatos/
